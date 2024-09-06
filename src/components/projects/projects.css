@@ -1,0 +1,200 @@
+.projectContainer {
+  padding: 0 100px;
+  overflow-y: auto;
+  height: 101vh;
+}
+
+.projects {
+  margin: 1cm 0;
+  animation: flipIn 800ms ease-in-out normal;
+  border-radius: 5px;
+  padding: 1cm;
+}
+
+.projectLinks {
+  margin: 1rem 0;
+}
+
+.projectLinks .web,
+.projectLinks .github {
+  font-size: larger;
+}
+
+.projectLinks a {
+  font-size: 0.8rem;
+  text-decoration: under;
+  color: rgb(0, 0, 0);
+}
+
+.project {
+  max-width: clamp(300px, 800px, 800px);
+  margin: auto;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 200px auto 120px;
+  position: relative;
+  padding: 10px 10px;
+  border-bottom: 1px solid black;
+}
+
+.links {
+  margin: 20px 0;
+}
+
+.link {
+  color: teal;
+  text-decoration: underline;
+}
+
+h1.projectName {
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 10px 0;
+  color: rgb(13, 11, 53);
+}
+
+h2.projectName {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: rgb(13, 11, 53);
+}
+
+.techName {
+  font-size: 10px;
+  margin: 0 2px;
+  background-color: rgb(230, 230, 230);
+  padding: 2px;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.projectDescription {
+  text-indent: 20px;
+}
+
+.projectImage {
+  display: none;
+  width: 500px;
+  height: auto;
+}
+
+.projectImage.show {
+  display: block;
+  animation: fade 1.3s forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translate(-10px -10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.ProjectPopupContainer {
+  display: grid;
+  height: 100%;
+  align-items: center;
+  grid-template-columns: auto auto;
+}
+
+.right {
+  padding: 10px;
+}
+
+.noURL {
+  font-size: 0.8rem;
+}
+.noURL .crossmark {
+  font-size: large;
+}
+
+.projectTechs {
+  margin: 10px 0;
+}
+
+@keyframes flipIn {
+  0% {
+    transform: scale(+0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .projectContainer {
+    padding: 2rem 0;
+  }
+
+  .projectImage {
+    width: 200px;
+    height: auto;
+  }
+
+  .ProjectPopupContainer {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .project {
+    grid-template-columns: auto;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .right {
+    padding: 2px;
+  }
+
+  .projects {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  .projectContainer {
+    padding: 3rem 0;
+  }
+
+  .projects {
+    display: block;
+  }
+
+  .projectImage {
+    width: 200px;
+    height: auto;
+  }
+
+  .ProjectPopupContainer {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

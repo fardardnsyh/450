@@ -1,0 +1,27 @@
+/* Setting up globals */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#portal-root {
+  display: block;
+  position: fixed;
+  left: 0cm;
+  top: 0cm;
+  z-index: 100;
+}
